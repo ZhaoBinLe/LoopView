@@ -47,11 +47,6 @@
 
 
 }
-
-
-- (void)didSelectPageViewWithNumber:(NSInteger)selectNumber {
-    NSLog(@"%ld",(long)selectNumber);
-}
 - (void)didSelectLoopViewWithNumber:(NSInteger)selectNumber {
     NSLog(@"%ld",(long)selectNumber);
 }
