@@ -137,7 +137,7 @@ static const int viewNum = 3;
 }
 - (void)resetImage {
     if (_isWebImage) {
-        [leftView sd_setImageWithURL:[NSURL URLWithString:_imageAry[count-1]]];
+        [leftView sd_setImageWithURL:[NSURL URLWithString:_imageAry[(currentIndex-1)%count]]];
         [middleView sd_setImageWithURL:[NSURL URLWithString:_imageAry[(currentIndex)%count]]];
         [rightView sd_setImageWithURL:[NSURL URLWithString:_imageAry[(currentIndex+1)%count]]];
     }else {
@@ -145,7 +145,7 @@ static const int viewNum = 3;
         middleView.image = [UIImage imageNamed:_imageAry[(currentIndex)%count]];
         rightView.image = [UIImage imageNamed:_imageAry[(currentIndex+1)%count]];
     }
-
+   //保持middleview
     loopView.contentOffset = CGPointMake(self.frame.size.width, 0.f);
     pageController.currentPage= (currentIndex)%count;
    

@@ -19,7 +19,7 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view.
-    LoopPlayView *loopview = [[LoopPlayView alloc]initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width, self.view.frame.size.height)];
+    LoopPlayView *loopview = [[LoopPlayView alloc]initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width, self.view.frame.size.height/3)];
     
 #if 1
     loopview.isWebImage=YES;
