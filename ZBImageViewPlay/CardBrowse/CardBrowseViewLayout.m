@@ -60,7 +60,6 @@ static CGFloat const ScaleFactor = 0.2;
     return YES;
 }
 
-
 @end
 
 
