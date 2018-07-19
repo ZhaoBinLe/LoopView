@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 #import "LoopPlayView.h"
-
+#import "CardBrowseView.h"
 @interface MainViewController ()<LoopPlayViewDelegate>
 
 @end
@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+
 
     // Do any additional setup after loading the view.
     LoopPlayView *loopview = [[LoopPlayView alloc]initWithFrame:CGRectMake(0.f, 0.f, self.view.frame.size.width, self.view.frame.size.height/3)];
@@ -45,6 +47,8 @@
 
     [self.view addSubview:loopview];
 
+    CardBrowseView *cardView = [[CardBrowseView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height/3, self.view.frame.size.width, self.view.frame.size.height/3*2)];
+    [self.view addSubview:cardView];
 
 }
 - (void)didSelectLoopViewWithNumber:(NSInteger)selectNumber {
