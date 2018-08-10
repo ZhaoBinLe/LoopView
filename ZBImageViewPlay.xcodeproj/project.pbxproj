@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810BAB7E2108453C004C4A3E /* AliPayLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 810BAB7D2108453C004C4A3E /* AliPayLoading.m */; };
+		810BAB812108454C004C4A3E /* AliPaySuccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 810BAB802108454C004C4A3E /* AliPaySuccess.m */; };
 		8151703C1F0368FE00DA010F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8151703B1F0368FE00DA010F /* main.m */; };
 		8151703F1F0368FE00DA010F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8151703E1F0368FE00DA010F /* AppDelegate.m */; };
 		815170411F0368FE00DA010F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815170401F0368FE00DA010F /* Assets.xcassets */; };
@@ -34,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		810BAB7C2108453C004C4A3E /* AliPayLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliPayLoading.h; sourceTree = "<group>"; };
+		810BAB7D2108453C004C4A3E /* AliPayLoading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliPayLoading.m; sourceTree = "<group>"; };
+		810BAB7F2108454C004C4A3E /* AliPaySuccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AliPaySuccess.h; sourceTree = "<group>"; };
+		810BAB802108454C004C4A3E /* AliPaySuccess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AliPaySuccess.m; sourceTree = "<group>"; };
 		815170371F0368FE00DA010F /* ZBImageViewPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZBImageViewPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8151703B1F0368FE00DA010F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8151703D1F0368FE00DA010F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +101,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		810BAB7B2108451F004C4A3E /* AliPay */ = {
+			isa = PBXGroup;
+			children = (
+				810BAB7C2108453C004C4A3E /* AliPayLoading.h */,
+				810BAB7D2108453C004C4A3E /* AliPayLoading.m */,
+				810BAB7F2108454C004C4A3E /* AliPaySuccess.h */,
+				810BAB802108454C004C4A3E /* AliPaySuccess.m */,
+			);
+			path = AliPay;
+			sourceTree = "<group>";
+		};
 		8151702E1F0368FE00DA010F = {
 			isa = PBXGroup;
 			children = (
@@ -121,9 +138,10 @@
 				815170521F03766600DA010F /* MainViewController.m */,
 				8151704E1F0370D600DA010F /* LoopPlayView.h */,
 				8151704F1F0370D600DA010F /* LoopPlayView.m */,
+				810BAB7B2108451F004C4A3E /* AliPay */,
 				8187F69A20F5A6B8000CF8D0 /* CardBrowse */,
-				815170401F0368FE00DA010F /* Assets.xcassets */,
 				815170421F0368FE00DA010F /* LaunchScreen.storyboard */,
+				815170401F0368FE00DA010F /* Assets.xcassets */,
 				815170451F0368FE00DA010F /* Info.plist */,
 				8151703A1F0368FE00DA010F /* Supporting Files */,
 			);
@@ -268,11 +286,13 @@
 				815170501F0370D600DA010F /* LoopPlayView.m in Sources */,
 				815170861F0383D600DA010F /* UIImageView+HighlightedWebCache.m in Sources */,
 				815170871F0383D600DA010F /* UIImageView+WebCache.m in Sources */,
+				810BAB812108454C004C4A3E /* AliPaySuccess.m in Sources */,
 				815170851F0383D600DA010F /* UIImage+WebP.m in Sources */,
 				815170811F0383D600DA010F /* SDWebImagePrefetcher.m in Sources */,
 				8151703F1F0368FE00DA010F /* AppDelegate.m in Sources */,
 				8151707D1F0383D600DA010F /* SDWebImageDecoder.m in Sources */,
 				8151707E1F0383D600DA010F /* SDWebImageDownloader.m in Sources */,
+				810BAB7E2108453C004C4A3E /* AliPayLoading.m in Sources */,
 				8151703C1F0368FE00DA010F /* main.m in Sources */,
 				815170801F0383D600DA010F /* SDWebImageManager.m in Sources */,
 				815170881F0383D600DA010F /* UIView+WebCacheOperation.m in Sources */,

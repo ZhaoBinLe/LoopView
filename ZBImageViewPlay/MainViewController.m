@@ -9,6 +9,8 @@
 #import "MainViewController.h"
 #import "LoopPlayView.h"
 #import "CardBrowseView.h"
+#import "AliPayLoading.h"
+#import "AliPaySuccess.h"
 @interface MainViewController ()<LoopPlayViewDelegate>
 
 @end
@@ -47,8 +49,31 @@
 
     [self.view addSubview:loopview];
 
-    CardBrowseView *cardView = [[CardBrowseView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height/3, self.view.frame.size.width, self.view.frame.size.height/3*2)];
+    CardBrowseView *cardView = [[CardBrowseView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height/3, self.view.frame.size.width, self.view.frame.size.height/3)];
     [self.view addSubview:cardView];
+    
+    __block UIView *loadview = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(cardView.frame), self.view.frame.size.width, self.view.frame.size.height/4)];
+    [AliPayLoading loadingShowIn:loadview];
+    [self.view addSubview:loadview];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [AliPayLoading loadingHideIn:loadview];
+        [loadview removeFromSuperview];
+        loadview = nil;
+        __block UIView *successView = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(cardView.frame), self.view.frame.size.width, self.view.frame.size.height/4)];
+        [AliPaySuccess successShowIn:successView];
+        [self.view addSubview:successView];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [AliPaySuccess successHideIn:successView];
+            [successView removeFromSuperview];
+            successView = nil;
+        });
+    });
+    
+   
+    
+ 
+    
 
 }
 - (void)didSelectLoopViewWithNumber:(NSInteger)selectNumber {
